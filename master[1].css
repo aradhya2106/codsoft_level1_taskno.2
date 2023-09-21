@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EADBC8;
+}
+/* font-family: 'Croissant One', cursive;
+font-family: 'Mooli', sans-serif;
+font-family: 'Roboto Slab', serif; */
+header {
+    background-color: #0F2C59;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+#text{
+    color: #FFB000;
+}
+nav {
+    display: flex;
+}
+.name{
+    font-size: 42px;
+    /* font-family: ; */
+}
+nav a {
+    font-family: 'Croissant One', cursive;
+    color: #F8F0E5;
+    text-decoration: none;
+    margin-left: 20px;
+}
+nav div{
+    margin: auto 15px auto auto;
+
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.profile-image {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-image img {
+    max-width: 70%;
+    border-radius: 50%;
+}
+
+.profile-text {
+    font-family: 'Mooli', sans-serif;
+    flex: 2;
+}
+.experience {
+    margin-top: 50px;
+    text-align: center;
+    background-color: #F8F0E5;
+    padding: 30px;
+}
+.experience h2{
+    font-size: 45px;
+    font-family: 'Croissant One', cursive;
+}
+.experience ul{
+    font-family: 'Mooli', sans-serif;
+}
+h1{
+    font-weight: bold ;
+    font-size: 50px;
+    color: #0F2C59;
+}
+li{
+    margin-top:10px;
+    margin-bottom: 10px; 
+    font-size: 30px;
+}
+.hobbies{
+    /* margin-top: 50px; */
+    text-align: center;
+    background-color: #F8F0E5;
+    padding: 30px;
+} 
+.hobbies h2{
+    font-size: 45px;
+    font-family: 'Croissant One', cursive;
+}
+.hobbies ul{
+    font-family: 'Mooli', sans-serif;
+}
+.list{
+    list-style-type: none;
+}
+.icoList{
+    margin: 10px ;
+    display: flex;
+    text-align: center;
+    /* padding-left:; */
+}
+.ico{
+    flex: 4;
+    margin:20px;
+}
+.ico object{
+    pointer-events: none; 
+}
+.icons {
+    margin-top: 20px;
+}

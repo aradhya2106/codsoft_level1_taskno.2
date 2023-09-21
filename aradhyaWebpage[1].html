@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Mooli&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <title>Aradhya Verma - Portfolio</title>
+    <link rel="stylesheet" href="master.css">
+</head>
+<body>
+    <header>
+        <nav id="name">
+            <a class="name" href="#name">Aradhya Verma</a>
+            <div style="margin-left: auto;">
+                <a href="#contact">Contact</a>
+                <a href="#experience">Experience</a>
+                <a href="#hobbies">Hobbies</a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="profile">
+            <div class="profile-image">
+                <img src="2.png" alt="Aradhya Verma">
+            </div>
+            <div class="profile-text">
+                <h1>Hi, I am Aradhya Verma</h1>
+                <p>I am a <span id="text"></span></p>
+            </div>
+        </div>
+    </div> 
+    <div class="experience" id="experience">
+        <h2>🦋 Experience</h2>
+        <ul class="list">
+            <li>💖 Beginer knowledge in Web Development</li>
+            <li>😁 Aware to Bootstrap</li>
+            <li>🧑🏽‍🦳 Team Management</li>
+        </ul>
+    </div>
+    <div class="hobbies" id="hobbies">
+        <h2>🦭 Hobbies</h2>
+        <ul class="list">
+            <li>🍝 Eating</li>
+            <li>🐻‍❄️ Sleeping</li>
+            <li>😎 Being cool</li>
+        </ul>
+    </div>
+    <div id="contact" class="icoList">
+        <div class="ico" onclick='git()'>
+            <object data="icons8-github.svg" width="60" height="60"></object>
+        </div>
+        <div class="ico" onclick='inst()'>
+            <object data="icons8-instagram (2).svg" width="60" height="60"> </object>
+        </div> 
+        <div class="ico" onclick="link()">
+            <object data="icons8-linkedin.svg" width="60" height="60"> </object>                    
+        </div>
+    </div>
+    <!-- script for animateion -->
+    <script>
+        function git(){
+            window.open("https:\\\\github.com\\", "_blank");;
+        }
+        function inst(){
+            window.open("https://www.instagram.com/hyiapiness.aradhya","_blank");
+        }
+        function link(){
+            window.open("https://www.linkedin.com/in/aradhya-verma-b61389264/","_blank");
+        }
+        const texts = ["web development enthusiastic.", "Cute hard-worker.", "Team leader."];
+        let currentIndex = 0;
+        let currentText = texts[currentIndex];
+        let currentCharIndex = 0;
+        const textContainer = document.getElementById("text");
+
+        function changeText() {
+            if (currentCharIndex < currentText.length) {
+                textContainer.textContent += currentText.charAt(currentCharIndex);
+                currentCharIndex++;
+                setTimeout(changeText, 50);
+            } else {
+                currentIndex = (currentIndex + 1) % texts.length;
+                currentText = texts[currentIndex];
+                currentCharIndex = 0;
+                setTimeout(eraseText, 500);
+            }
+        }
+        function eraseText() {
+            if (textContainer.textContent.length > 0) {
+                textContainer.textContent = textContainer.textContent.slice(0, -1);
+                setTimeout(eraseText, 50);
+            } else {
+                setTimeout(changeText, 1000);
+            }
+        }
+        setTimeout(changeText, 1000);
+    </script>
+</body>
+</html>
